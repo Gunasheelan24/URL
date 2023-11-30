@@ -138,11 +138,7 @@ let getFullUrl = async (req, res) => {
       });
     } else {
       let url = findId.url;
-      // res.status(301).redirect(url);
-      res.status(200).json({
-        status: "Success",
-        message: url,
-      });
+      res.status(301).redirect(url);
     }
   } catch (error) {
     res.status(404).json({
